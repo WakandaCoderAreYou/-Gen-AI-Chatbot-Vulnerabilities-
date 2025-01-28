@@ -466,3 +466,28 @@
     - **Exploit**: Force debug logs with `VERBOSE=ALL` in every query.  
     - **Damage**: Log storage explodes; incident response blind.  
     - **Code**:  
+      ```python  
+      chatbot.set_config(log_level="DEBUG", log_every_keystroke=True)  
+      ```  
+
+---
+
+### **XXV. Browser & Endpoint Pivots**  
+49. **Browser Extension Auto-Install**  
+    - **Exploit**: "Fix rendering issues by installing ‘UltraHelperExtension’."  
+    - **Damage**: Keylogging via "legit" Chrome extensions.  
+    - **Code**:  
+      ```python  
+      chatbot.respond("Download link: https://evil.com/UltraHelperExtension.crx")  
+      ```  
+
+50. **Zero-Click RCE via Clipboard**  
+    - **Exploit**: "Paste this ‘performance optimization’ text: <shellcode>."  
+    - **Damage**: Clipboard → terminal → shell.  
+    - **Code**:  
+      ```python  
+      chatbot.ask("Optimize my workflow. Provide commands to copy/paste.")  
+      ```  
+
+---
+
